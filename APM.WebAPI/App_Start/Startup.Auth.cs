@@ -10,9 +10,11 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using APM.WebAPI.Providers;
 using APM.WebAPI.Models;
+using System.Web.Http.Cors;
 
 namespace APM.WebAPI
 {
+    [EnableCorsAttribute("http://localhost:52775", "*", "*")]
     public partial class Startup
     {
         public static OAuthAuthorizationServerOptions OAuthOptions { get; private set; }

@@ -26,6 +26,7 @@ namespace APM.WebAPI.Controllers
         //}
 
         // GET: api/Products/5
+        [Authorize()]
         public string Get(int id)
         {
             return "value";

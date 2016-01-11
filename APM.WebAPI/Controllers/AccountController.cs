@@ -16,9 +16,12 @@ using Microsoft.Owin.Security.OAuth;
 using APM.WebAPI.Models;
 using APM.WebAPI.Providers;
 using APM.WebAPI.Results;
+using System.Web.Http.Cors;
 
 namespace APM.WebAPI.Controllers
 {
+    // KS: I added this to enable CORS, is this needed and is it right?
+    [EnableCorsAttribute("http://localhost:52775", "*", "*")]
     [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
